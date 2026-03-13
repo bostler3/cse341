@@ -3,11 +3,71 @@
 GET http://localhost:8080/contacts
 
 ### Get contact by id
+// Make sure to input the desired contact ID
 GET http://localhost:8080/contacts/69aa7e1fff77e43aea5d375e
+
+### Create a new contact
+POST http://localhost:8080/contacts HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Tray",
+    "lastName":"Barn",
+    "email":"tbarn@gmail.com",
+    "favoriteColor":"Brown",
+    "birthday":"03/01/2006"
+}
+
+### Modify an existing contact
+// Make sure to input the desired contact ID
+PUT http://localhost:8080/contacts/69aa7e1fff77e43aea5d375e HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Adam",
+    "lastName":"Barn",
+    "email":"abarn@test.com",
+    "favoriteColor":"Yellow",
+    "birthday":"09/01/1980"
+}
+
+### Delete an existing contact
+// Make sure to input the desired contact ID
+DELETE http://localhost:8080/contacts/69b436b0d68706c817af0e6a
 
 // PRODUCTION
 ### Get all contacts
 GET https://cse341-contacts-project-o2mp.onrender.com/contacts
 
 ### Get contact by id
+// Make sure to input the desired contact ID
 GET https://cse341-contacts-project-o2mp.onrender.com/contacts/69aa7e1fff77e43aea5d375e
+
+### Create a new contact
+POST https://cse341-contacts-project-o2mp.onrender.com/contacts HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Tray",
+    "lastName":"Barn",
+    "email":"tbarn@gmail.com",
+    "favoriteColor":"Brown",
+    "birthday":"03/01/2006"
+}
+
+### Modify an existing contact
+// Make sure to input the desired contact ID
+PUT https://cse341-contacts-project-o2mp.onrender.com/contacts/69aa7e1fff77e43aea5d375e HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Adam",
+    "lastName":"Barn",
+    "email":"abarn@test.com",
+    "favoriteColor":"Yellow",
+    "birthday":"09/01/1980"
+}
+
+### Delete an existing contact
+// Make sure to input the desired contact ID
+DELETE https://cse341-contacts-project-o2mp.onrender.com/contacts/69b436b0d68706c817af0e6a
