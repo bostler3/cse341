@@ -62,7 +62,7 @@ content-type: application/json
 
 ### Modify an existing author
 // Make sure to input the desired author ID
-PUT http://localhost:8080/authors/69b9ab8e6b06fe7dd2d72b22 HTTP/1.1
+PUT http://localhost:8080/authors/69bc47e0c6969160b81a5031 HTTP/1.1
 content-type: application/json
 
 {
@@ -74,41 +74,82 @@ content-type: application/json
 
 ### Delete an existing author
 // Make sure to input the desired author ID
-DELETE http://localhost:8080/authors/69b9ab8e6b06fe7dd2d72b22
+DELETE http://localhost:8080/authors/69bc47e0c6969160b81a5031
 
 // PRODUCTION
 ### Get all books
-GET https://cse341-contacts-project-o2mp.onrender.com/contacts
+GET https://cse341-project02-movl.onrender.com/books
 
-### Get contact by id
-// Make sure to input the desired contact ID
-GET https://cse341-contacts-project-o2mp.onrender.com/contacts/69aa7e1fff77e43aea5d375e
+### Get book by ISBN (i.e. id)
+// Make sure to input the desired ISBN
+GET https://cse341-project02-movl.onrender.com/books/9780590353403
 
-### Create a new contact
-POST https://cse341-contacts-project-o2mp.onrender.com/contacts HTTP/1.1
+### Create a new book
+POST https://cse341-project02-movl.onrender.com/books HTTP/1.1
 content-type: application/json
 
 {
-    "firstName":"Tray",
-    "lastName":"Barn",
-    "email":"tbarn@gmail.com",
-    "favoriteColor":"Brown",
-    "birthday":"03/01/2006"
+    "id":"9781338878936",
+    "format":"hardback",
+    "bookTitle":"Harry Potter and the Chamber of Secrets",
+    "yearPublished":1999,
+    "publisherName":"Arthur A. Levine Books",
+    "numPages":352,
+    "genre":"Fiction",
+    "subject":"Fantasy",
+    "authorId":"69b9ab8e6b06fe7dd2d72b22"
 }
 
-### Modify an existing contact
-// Make sure to input the desired contact ID
-PUT https://cse341-contacts-project-o2mp.onrender.com/contacts/69aa7e1fff77e43aea5d375e HTTP/1.1
+### Modify an existing book
+// Make sure to input the desired ISBN (book ID)
+PUT https://cse341-project02-movl.onrender.com/books/9780590353403 HTTP/1.1
 content-type: application/json
 
 {
-    "firstName":"Adam",
-    "lastName":"Barn",
-    "email":"abarn@test.com",
-    "favoriteColor":"Yellow",
-    "birthday":"09/01/1980"
+    "format":"hardback",
+    "bookTitle":"Harry Potter and the Sorcerer's Stone",
+    "yearPublished":1998,
+    "publisherName":"Arthur A. Levine Books",
+    "numPages":320,
+    "genre":"Fiction",
+    "subject":"Fantasy",
+    "authorId":"69b9ab8e6b06fe7dd2d72b22"
 }
 
-### Delete an existing contact
-// Make sure to input the desired contact ID
-DELETE https://cse341-contacts-project-o2mp.onrender.com/contacts/69b436b0d68706c817af0e6a
+### Delete an existing book
+// Make sure to input the desired ISBN (book ID)
+DELETE https://cse341-project02-movl.onrender.com/books/9780590353403
+
+### Get all authors
+GET https://cse341-project02-movl.onrender.com/authors
+
+### Get author by author id
+// Make sure to input the desired author ID
+GET https://cse341-project02-movl.onrender.com/authors/69b9ab8e6b06fe7dd2d72b22
+
+### Create a new author
+POST https://cse341-project02-movl.onrender.com/authors HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"J.K.",
+    "lastName":"Rowling",
+    "birthdate":"07/31/1965",
+    "bookIds":["9780590353403"]
+}
+
+### Modify an existing author
+// Make sure to input the desired author ID
+PUT https://cse341-project02-movl.onrender.com/authors/69bc47e0c6969160b81a5031 HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"J.K.",
+    "lastName":"Rowling",
+    "birthdate":"07/31/1965",
+    "bookIds":["9780590353403", "9781338878936"]
+}
+
+### Delete an existing author
+// Make sure to input the desired author ID
+DELETE https://cse341-project02-movl.onrender.com/authors/69bc47e0c6969160b81a5031

@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
+const validation = require("../middleware/validate");
 const authorsController = require("../controllers/authors");
 
 // Route/endpoint to get all authors from database
@@ -10,10 +11,10 @@ router.get("/", authorsController.getAll);
 router.get("/:id", authorsController.getSingle);
 
 // Route/endpoint to create a new author
-router.post("/", authorsController.createAuthor);
+router.post("/", validation.saveAuthor, authorsController.createAuthor);
 
 // Route/endpoint to modify an existing author
-router.put("/:id", authorsController.modifyAuthor);
+router.put("/:id", validation.saveAuthor, authorsController.modifyAuthor);
 
 // Route/endpoint to delete an existing author
 router.delete("/:id", authorsController.deleteAuthor);
