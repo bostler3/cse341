@@ -5,8 +5,8 @@ const doc = {
         title: 'Contacts API',
         description: "Contacts API. Can retrieve all contacts in the database, retrieve a single contact by the contact ID, create a new contact, modify an existing contact's information and delete an existing contact."
     },
-    host: 'localhost:8080',
-    schemes: ['http', 'https']
+    host: 'cse341-contacts-project-o2mp.onrender.com',
+    schemes: ['https']
 };
 
 const outputFile = './swagger.json';

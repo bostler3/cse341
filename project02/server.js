@@ -20,14 +20,6 @@ app.use((req, res, next) => {
 });
 app.use("/", require("./routes"));
 
-// From Week 3 Team Activity solution video (catch-all error handling)
-process.on("uncaughtException", (err, origin) => {
-  console.log(
-    process.stderr.fd,
-    `Caught exception: ${err}\n` + `Exception origin: ${origin}`,
-  );
-});
-
 mongodb.initDb((err) => {
   if (err) {
     console.log(err);

@@ -33,7 +33,7 @@ content-type: application/json
 
 ### Delete an existing contact
 // Make sure to input the desired contact ID
-DELETE http://localhost:8080/contacts/69b436b0d68706c817af0e6a
+DELETE http://localhost:8080/contacts/69b456fb22827b02ec6af9f7
 
 // PRODUCTION
 ### Get all contacts
