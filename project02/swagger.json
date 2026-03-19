@@ -5,13 +5,17 @@
     "description": "Library API. Can retrieve all authors and books in the database, retrieve a single author or book by the ID, create a new author or book, modify an existing author's or book's information and delete an existing author or book.",
     "version": "1.0.0"
   },
-  "host": "https://cse341-project02-movl.onrender.com",
+  "host": "cse341-project02-movl.onrender.com",
   "basePath": "/",
-  "schemes": ["https"],
+  "schemes": [
+    "https"
+  ],
   "paths": {
     "/": {
       "get": {
-        "tags": ["Hello World"],
+        "tags": [
+          "Hello World"
+        ],
         "description": "",
         "responses": {
           "200": {
@@ -22,9 +26,13 @@
     },
     "/books/": {
       "get": {
-        "tags": ["Books"],
+        "tags": [
+          "Books"
+        ],
         "description": "",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -35,7 +43,9 @@
         }
       },
       "post": {
-        "tags": ["Books"],
+        "tags": [
+          "Books"
+        ],
         "description": "",
         "parameters": [
           {
@@ -93,9 +103,13 @@
     },
     "/books/{id}": {
       "get": {
-        "tags": ["Books"],
+        "tags": [
+          "Books"
+        ],
         "description": "",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -114,7 +128,9 @@
         }
       },
       "put": {
-        "tags": ["Books"],
+        "tags": [
+          "Books"
+        ],
         "description": "",
         "parameters": [
           {
@@ -173,7 +189,9 @@
         }
       },
       "delete": {
-        "tags": ["Books"],
+        "tags": [
+          "Books"
+        ],
         "description": "",
         "parameters": [
           {
@@ -198,9 +216,13 @@
     },
     "/authors/": {
       "get": {
-        "tags": ["Authors"],
+        "tags": [
+          "Authors"
+        ],
         "description": "",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -211,7 +233,9 @@
         }
       },
       "post": {
-        "tags": ["Authors"],
+        "tags": [
+          "Authors"
+        ],
         "description": "",
         "parameters": [
           {
@@ -254,9 +278,13 @@
     },
     "/authors/{id}": {
       "get": {
-        "tags": ["Authors"],
+        "tags": [
+          "Authors"
+        ],
         "description": "",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -275,7 +303,9 @@
         }
       },
       "put": {
-        "tags": ["Authors"],
+        "tags": [
+          "Authors"
+        ],
         "description": "",
         "parameters": [
           {
@@ -322,7 +352,9 @@
         }
       },
       "delete": {
-        "tags": ["Authors"],
+        "tags": [
+          "Authors"
+        ],
         "description": "",
         "parameters": [
           {

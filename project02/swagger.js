@@ -5,7 +5,7 @@ const doc = {
         title: 'Library API',
         description: "Library API. Can retrieve all authors and books in the database, retrieve a single author or book by the ID, create a new author or book, modify an existing author's or book's information and delete an existing author or book."
     },
-    host: 'https://cse341-project02-movl.onrender.com',
+    host: 'cse341-project02-movl.onrender.com',
     schemes: ['https']
 };
 
