@@ -4,7 +4,7 @@ const mongodb = require("../data/database");
 const getAll = async (req, res) => {
   //#swagger.tags=["Books"]
   try {
-    testingerrohandling();
+    // testingerrohandling();
     const result = await mongodb
       .getDatabase()
       .db()
