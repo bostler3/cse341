@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
+const { isAuthenticated } = require("../middleware/authenticate");
 const validation = require("../middleware/validate");
 const authorsController = require("../controllers/authors");
 
@@ -11,12 +12,22 @@ router.get("/", authorsController.getAll);
 router.get("/:id", authorsController.getSingle);
 
 // Route/endpoint to create a new author
-router.post("/", validation.saveAuthor, authorsController.createAuthor);
+router.post(
+  "/",
+  isAuthenticated,
+  validation.saveAuthor,
+  authorsController.createAuthor,
+);
 
 // Route/endpoint to modify an existing author
-router.put("/:id", validation.saveAuthor, authorsController.modifyAuthor);
+router.put(
+  "/:id",
+  isAuthenticated,
+  validation.saveAuthor,
+  authorsController.modifyAuthor,
+);
 
 // Route/endpoint to delete an existing author
-router.delete("/:id", authorsController.deleteAuthor);
+router.delete("/:id", isAuthenticated, authorsController.deleteAuthor);
 
 module.exports = router;
